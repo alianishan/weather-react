@@ -1,38 +1,160 @@
 .App {
-  text-align: center;
+    text-align: center;
+    
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+    position:relative;
+    width:50%;
+    height:70%;
+    margin: auto;
+    margin-bottom:10px;
+    margin-top:1%;
+    background: linear-gradient(55deg, #4c81a5 30%, #9daadf);
+    background-size:cover;
+    box-shadow:5px 7px 5px 7px #fff;
+    padding:20px;
+    border-radius: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.title{
+    color:#fff;
+    font-weight:800;
+    font-size: 30px;  
+}
+.search-form {
+    margin-top:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.search-form input{
+    width: 50%;
+    height: 40px;
+    padding:5px;
+    border:1px solid black;
+    background:rgb(0, 0, 0);
+    color:#fff;
+    border-radius:10px;
+    margin:0 auto;
+    opacity: 0.3;
+    box-shadow:5px 3px 7px 2px #fff;
+}
+ ::placeholder {
+    color: white;
+    opacity: 1; 
+    font-weight: 500;
   }
+.search-form button {
+    width:8%;
+    height:50px;
+    padding:5px;
+    border:none;
+    border-radius:10px !important;
+    background:linear-gradient(45deg, #8e0e00 30%, #1f1c18 90%);
+    font-weight: 800;
+    font-size: 10px;
+    color: #fff;
+    cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search-form button:hover{
+    background:linear-gradient(45deg, #8e0e00 30%, #1f1c18 90%);
+    color: #000000;
 }
-
-.App-link {
-  color: #61dafb;
+.main-container {
+    width: 100%;
+    height: auto;
+    color:#fff;
+    text-align: center;
+    margin-top: 30px;
 }
+.main-container h4{
+    font-size: 25px;
+    font-weight: 800;
+}
+.main-container .weather-icon i{
+    font-size: 30px;
+    font-size: 800;
+    animation: iconanimation 3s infinite;
+}
+.temprature-range {
+    width:90%;
+    height:50px;
+    padding:5px;
+    border:none;
+    border-radius:10px !important;
+    background:linear-gradient(45deg, #8e0e00 30%, #1f1c18 90%);
+    font-weight: 800;
+    font-size: 22px;
+    color: #fff;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.temprature-range h6 {
+    align-items: center;
+  
+}
+@keyframes iconanimation{
+    from{
+        transform: scale(0.5,0.5);
+    }
+    to{
+        transform: scale(1,1);
+    }
+}
+@media only screen and (min-width: 600px) {
+    .search-form input{
+        width: 70%;
+    }
+    .search-form button{
+        width: 25%;
+    }
+}
+@media only screen and (max-width:600px){
+    .search-form button{
+        width: 70%;
+    }
+    .search-form button {
+        width: 25%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .search-form input{
+        width: 80%;
+    }
+    .search-form button{
+        width: 18%;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .search-form input{
+        width: 80%;
+    }
+    .search-form button{
+        width: 18%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .search-form input{
+        width: 90%;
+    }
+    .search-form button{
+        width: 8%;
+    }
+}
+.temprature h1{
+    font-size: 30px;
+    font-weight: 900;
+}
+.location h3 i{
+    margin: 10px;
+    animation: locationicon 2s infinite;
+}
+@keyframes locationicon{
+    0% {
+        transform: rotateY(0deg);
+    }
+    50%{
+        transform:rotateY(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
